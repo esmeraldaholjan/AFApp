@@ -1,0 +1,13 @@
+.main-container {
+  display: flex;
+  margin: 8rem auto 0;
+  max-width: 75rem;
+  min-height: 16rem;
+  background-color: white;
+  border-radius: 10px;
+  main {
+    width: 100%;
+    text-align: left;
+    margin: 2rem;
+  }
+}
