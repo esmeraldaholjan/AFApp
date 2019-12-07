@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CreateEmployeeComponent } from './create-employee.component';
 import { SharedModule } from '../shared/shared.module';
 import { TranslateModule } from '@ngx-translate/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
     {
@@ -12,7 +13,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes), SharedModule, TranslateModule.forRoot()],
+    imports: [RouterModule.forRoot(routes), SharedModule, TranslateModule.forRoot(), ReactiveFormsModule],
     exports: [RouterModule, CreateEmployeeComponent],
     declarations: [CreateEmployeeComponent],
     providers: []

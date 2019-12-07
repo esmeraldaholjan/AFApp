@@ -1,3 +1,32 @@
 <app-main-container>
-    <h1 translate="lbl-wellcome"></h1>
+  <h1 translate="lbl-wellcome"></h1>
+  <div class="create-employee-form">
+    <h3 translate="lbl-fill-informations"></h3>
+    <form
+      method="POST"
+      (ngSubmit)="continueToCreateCompany()"
+      [formGroup]="emplyoeeInfoForm"
+    >
+      <div class="employee-informations">
+        <app-input
+          id="firstName"
+          formControlName="firstName"
+          label="lbl-first-name"
+          type="text"
+        ></app-input>
+        <app-input
+          id="lastName"
+          formControlName="lastName"
+          label="lbl-last-name"
+          type="text"
+        ></app-input>
+      </div>
+      <app-dropdown
+        id="companies"
+        label="lbl-choose-company"
+        [items]="companies"
+      ></app-dropdown>
+      <app-button type="submit" text="lbl-continue"></app-button>
+    </form>
+  </div>
 </app-main-container>

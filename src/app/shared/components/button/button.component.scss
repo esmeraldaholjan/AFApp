@@ -1,0 +1,14 @@
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  button {
+    height: 3rem;
+    min-width: 10rem;
+    border: 0;
+    border-radius: 2rem;
+    font-size: 20px;
+    font-family: sans-serif;
+    background-color: #5A743A;
+    color: white;
+  }
+}

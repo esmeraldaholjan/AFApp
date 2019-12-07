@@ -1,0 +1,6 @@
+<div class="dropdown-container">
+  <label for="{{ id }}">{{ label | translate }}</label>
+  <select>
+    <option *ngFor="let item of items">{{ item.name }}</option>
+  </select>
+</div>

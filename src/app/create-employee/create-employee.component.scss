@@ -1,0 +1,13 @@
+h1,
+h3 {
+  font-family: sans-serif;
+}
+
+.create-employee-form {
+  .employee-informations {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    max-width: 40rem;
+  }
+}
