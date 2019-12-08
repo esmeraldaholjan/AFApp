@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LinkEmployeeComponent } from '../link-employee/link-employee.component';
@@ -13,7 +14,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes), SharedModule, TranslateModule.forRoot(), ReactiveFormsModule],
+    imports: [CommonModule, RouterModule.forRoot(routes), SharedModule, TranslateModule.forRoot(), ReactiveFormsModule],
     exports: [RouterModule],
     declarations: [LinkEmployeeComponent]
 })

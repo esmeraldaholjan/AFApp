@@ -10,5 +10,10 @@
     "lbl-check-company-details": "Company details",
     "lbl-remove-employee": "Remove employee",
     "lbl-remove": "Remove",
-    "lbl-no-employees": "There are no employees linked to this company..."
+    "lbl-no-employees": "There are no employees linked to this company...",
+    "lbl-link-employee": "Link employee to company",
+    "lbl-employee-name": "Employee name",
+    "lbl-company": "Company",
+    "lbl-add": "Add",
+    "lbl-no-unlinked-emplyoees": "There are no unlinked employees to companies.."
 }

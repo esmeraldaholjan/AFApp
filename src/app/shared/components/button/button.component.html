@@ -1,3 +1,8 @@
 <div class="button-container">
-  <button type="{{ type }}">{{ text | translate }}</button>
+  <button
+    [ngStyle]="{ 'background-color': variant === 'red' ? '#98211B' : '#5A743A' }"
+    type="{{ type }}"
+  >
+    {{ text | translate }}
+  </button>
 </div>

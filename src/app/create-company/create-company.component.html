@@ -23,26 +23,27 @@
       [items]="companies"
     ></app-dropdown>
 
-    <table class="emplyees-table-container" *ngIf="shouldShowCompanyDetails">
+    <table class="employees-table-container" *ngIf="shouldShowCompanyDetails">
       <tr>
         <th>{{ "lbl-first-name" | translate }}</th>
         <th>{{ "lbl-last-name" | translate }}</th>
-        <th>{{ "lbl-remove-employee" | translate }}</th>
+        <th></th>
       </tr>
       <tr *ngFor="let employee of emplyoeesInChoosenCompany">
         <td>{{ employee.firstName }}</td>
         <td>{{ employee.lastName }}</td>
-        <td>
+        <td class="remove-employee">
           <app-button
             type="submit"
             text="lbl-remove"
+            variant="red"
             (click)="removeEmployee(employee)"
           ></app-button>
         </td>
       </tr>
     </table>
 
-    <div class="no-emplyoees" *ngIf="showNoEmployees">
+    <div class="no-employees" *ngIf="showNoEmployees">
       <p translate="lbl-no-employees"></p>
     </div>
   </div>

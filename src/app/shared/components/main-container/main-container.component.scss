@@ -8,6 +8,20 @@
   main {
     width: 100%;
     text-align: left;
-    margin: 2rem;
+    margin: 1rem 2rem;
+  }
+  aside {
+    width: 20rem;
+    background-color: black;
+    border-radius: 10px 0 0 10px;
+    .screen-navigator {
+      color: white;
+      text-align: left;
+      font-family: sans-serif;
+      font-size: 20px;
+      border-bottom: 1px solid grey;
+      padding: 1rem;
+      cursor: pointer;
+    }
   }
 }

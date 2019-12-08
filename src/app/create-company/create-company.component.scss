@@ -14,8 +14,17 @@ h1 {
 
 .company-details {
   margin-top: 3rem;
-  .emplyees-table-container {
+  .employees-table-container {
     width: 100%;
     font-family: sans-serif;
+    font-size: 20px;
+    .remove-employee {
+      display: flex;
+    }
+  }
+  .no-employees {
+    font-family: sans-serif;
+    color: red;
+    font-size: 18px;
   }
 }

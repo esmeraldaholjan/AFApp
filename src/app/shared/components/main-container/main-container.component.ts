@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main-container',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainContainerComponent implements OnInit {
 
-  constructor() { }
+  constructor(protected router: Router) { }
 
   ngOnInit() {
+  }
+
+  goToCreateEmployee() {
+    this.router.navigate(['/create-employee']);
+  }
+
+  goToCreateCompany() {
+    this.router.navigate(['/create-company']);
+  }
+
+  goToLinkEmployee() {
+    this.router.navigate(['/link-employee']);
   }
 
 }

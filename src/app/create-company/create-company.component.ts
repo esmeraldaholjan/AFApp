@@ -46,33 +46,26 @@ export class CreateCompanyComponent implements OnInit {
   seeComapnyDetails(company) {
     this.company = company;
     this.employees = this.storageService.get('employees');
-    this.emplyoeesInChoosenCompany = this.employees.filter(x => x.company === company);
-    
-    if(this.emplyoeesInChoosenCompany.length !== 0) {
+    this.emplyoeesInChoosenCompany = this.employees.filter(e => e.company === company);
+
+    if (this.emplyoeesInChoosenCompany.length !== 0) {
       this.shouldShowCompanyDetails = true;
+      this.showNoEmployees = false;
     } else {
       this.showNoEmployees = true;
+      this.shouldShowCompanyDetails = false;
     }
   }
 
   removeEmployee(employee) {
-    this.employees = this.employees.filter(e => e.id !== employee.id);
-
-    const editedEmplyoee = {
-      id: employee.id,
-      firstName: employee.firstName,
-      lastName: employee.lastName,
-      company: ""
-    };
-
-    this.employees.push(editedEmplyoee)
+    this.employees.find(e => e.id === employee.id)['company'] = "";
     this.storageService.set('employees', this.employees);
 
     this.seeComapnyDetails(this.company);
   }
 
   generateId(companiesArray): number {
-    return Math.max(...companiesArray.map(o => o.id), 0) + 1;
+    return Math.max(...companiesArray.map(c => c.id), 0) + 1;
   }
 
 }

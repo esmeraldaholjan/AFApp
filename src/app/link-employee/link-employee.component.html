@@ -1,3 +1,39 @@
-<p>
-  link-employee works!
-</p>
+<app-main-container>
+  <h1 translate="lbl-link-employee"></h1>
+  <form
+    method="POST"
+    [formGroup]="linkEmployeeToCompanyForm"
+    *ngIf="unlinkedEmployees.length"
+  >
+    <table class="employees-table-container">
+      <tr>
+        <th>{{ "lbl-first-name" | translate }}</th>
+        <th>{{ "lbl-last-name" | translate }}</th>
+        <th>{{ "lbl-company" | translate }}</th>
+        <th></th>
+      </tr>
+      <tr *ngFor="let employee of unlinkedEmployees">
+        <td>{{ employee.firstName }}</td>
+        <td>{{ employee.lastName }}</td>
+        <td class="link-employee">
+          <app-dropdown
+            id="company"
+            [items]="companies"
+            formControlName="company"
+          ></app-dropdown>
+        </td>
+        <td class="link-employee-button">
+          <app-button
+            type="submit"
+            text="lbl-add"
+            variant="green"
+            (click)="linkEmployeeToCompany(employee)"
+          ></app-button>
+        </td>
+      </tr>
+    </table>
+  </form>
+  <div class="no-employees" *ngIf="!unlinkedEmployees.length">
+    <p translate="lbl-no-unlinked-emplyoees"></p>
+  </div>
+</app-main-container>

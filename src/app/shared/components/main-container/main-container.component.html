@@ -1,4 +1,9 @@
 <div class="main-container">
+  <aside>
+    <div class="screen-navigator" (click)="goToCreateEmployee()">{{ 'lbl-create-employee' | translate }}</div>
+    <div class="screen-navigator" (click)="goToCreateCompany()">{{ 'lbl-create-company' | translate }}</div>
+    <div class="screen-navigator" (click)="goToLinkEmployee()">{{ 'lbl-link-employee' | translate }}</div>
+  </aside>
   <main>
     <ng-content></ng-content>
   </main>
