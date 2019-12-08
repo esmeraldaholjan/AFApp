@@ -1,0 +1,21 @@
+h1 {
+  font-family: sans-serif;
+}
+
+.create-company-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 27rem;
+  app-button {
+    margin-top: 0.6rem;
+  }
+}
+
+.company-details {
+  margin-top: 3rem;
+  .emplyees-table-container {
+    width: 100%;
+    font-family: sans-serif;
+  }
+}

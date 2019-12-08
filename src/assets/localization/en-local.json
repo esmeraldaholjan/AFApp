@@ -1,8 +1,14 @@
 {
-    "lbl-wellcome": "Wellcome!",
-    "lbl-fill-informations": "Please fill the mandatory fields below to continue...",
+    "lbl-create-employee": "Create an employee",
     "lbl-first-name": "First name",
     "lbl-last-name": "Last name",
     "lbl-choose-company": "Choose a company (optional)",
-    "lbl-continue": "Continue"
+    "lbl-create-company": "Create a company",
+    "lbl-select": "Select",
+    "lbl-save": "Save",
+    "lbl-company-name": "Company name",
+    "lbl-check-company-details": "Company details",
+    "lbl-remove-employee": "Remove employee",
+    "lbl-remove": "Remove",
+    "lbl-no-employees": "There are no employees linked to this company..."
 }

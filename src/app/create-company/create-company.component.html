@@ -1,3 +1,49 @@
-<p>
-  create-company works!
-</p>
+<app-main-container>
+  <h1 translate="lbl-create-company"></h1>
+  <form
+    method="POST"
+    class="create-company-form"
+    (ngSubmit)="saveCompany()"
+    [formGroup]="companyInfoForm"
+  >
+    <app-input
+      id="companyName"
+      formControlName="companyName"
+      label="lbl-company-name"
+      type="text"
+    ></app-input>
+    <app-button type="submit" text="lbl-save"></app-button>
+  </form>
+
+  <div class="company-details">
+    <h1 translate="lbl-check-company-details"></h1>
+    <app-dropdown
+      id="company"
+      (onDropdownItemChoosen)="seeComapnyDetails($event)"
+      [items]="companies"
+    ></app-dropdown>
+
+    <table class="emplyees-table-container" *ngIf="shouldShowCompanyDetails">
+      <tr>
+        <th>{{ "lbl-first-name" | translate }}</th>
+        <th>{{ "lbl-last-name" | translate }}</th>
+        <th>{{ "lbl-remove-employee" | translate }}</th>
+      </tr>
+      <tr *ngFor="let employee of emplyoeesInChoosenCompany">
+        <td>{{ employee.firstName }}</td>
+        <td>{{ employee.lastName }}</td>
+        <td>
+          <app-button
+            type="submit"
+            text="lbl-remove"
+            (click)="removeEmployee(employee)"
+          ></app-button>
+        </td>
+      </tr>
+    </table>
+
+    <div class="no-emplyoees" *ngIf="showNoEmployees">
+      <p translate="lbl-no-employees"></p>
+    </div>
+  </div>
+</app-main-container>

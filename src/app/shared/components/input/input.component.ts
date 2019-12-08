@@ -24,7 +24,8 @@ export class InputComponent implements OnInit, ControlValueAccessor {
   ngOnInit() {
   }
 
-  onInput(value: any): void {
+  onInput(event): void {
+    let value = event.target.value;
     this.propagateChange(value);
   }
 

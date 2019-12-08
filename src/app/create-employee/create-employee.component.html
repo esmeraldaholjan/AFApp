@@ -1,10 +1,9 @@
 <app-main-container>
-  <h1 translate="lbl-wellcome"></h1>
+  <h1 translate="lbl-create-employee"></h1>
   <div class="create-employee-form">
-    <h3 translate="lbl-fill-informations"></h3>
     <form
       method="POST"
-      (ngSubmit)="continueToCreateCompany()"
+      (ngSubmit)="saveEmployee()"
       [formGroup]="emplyoeeInfoForm"
     >
       <div class="employee-informations">
@@ -22,11 +21,12 @@
         ></app-input>
       </div>
       <app-dropdown
-        id="companies"
+        id="company"
+        formControlName="company"
         label="lbl-choose-company"
         [items]="companies"
       ></app-dropdown>
-      <app-button type="submit" text="lbl-continue"></app-button>
+      <app-button type="submit" text="lbl-save"></app-button>
     </form>
   </div>
 </app-main-container>
