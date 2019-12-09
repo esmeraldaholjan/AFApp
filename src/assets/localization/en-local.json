@@ -19,6 +19,7 @@
     "lbl-added-employee": "Successfully added employee!",
     "lbl-added-company": "Successfully added company!",
     "lbl-linked-employee": "Successfully linked employee to company!",
-    "lbl-removed-employee": "Successfully removed employee!"
+    "lbl-removed-employee": "Successfully removed employee!",
+    "lbl-create": "Create"
 
 }
