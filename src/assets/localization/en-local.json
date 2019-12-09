@@ -15,5 +15,10 @@
     "lbl-employee-name": "Employee name",
     "lbl-company": "Company",
     "lbl-add": "Add",
-    "lbl-no-unlinked-emplyoees": "There are no unlinked employees to companies.."
+    "lbl-no-unlinked-emplyoees": "There are no unlinked employees to companies..",
+    "lbl-added-employee": "Successfully added employee!",
+    "lbl-added-company": "Successfully added company!",
+    "lbl-linked-employee": "Successfully linked employee to company!",
+    "lbl-removed-employee": "Successfully removed employee!"
+
 }

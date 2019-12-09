@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { StorageService } from '../shared/services/storage.service';
 
@@ -8,6 +8,8 @@ import { StorageService } from '../shared/services/storage.service';
   styleUrls: ['./create-employee.component.scss']
 })
 export class CreateEmployeeComponent implements OnInit {
+  @ViewChild('toaster') toaster: any;
+  
   companies: Array<any>;
   emplyoeeInfoForm: FormGroup;
 
@@ -39,10 +41,11 @@ export class CreateEmployeeComponent implements OnInit {
     };
     employees.push(newEmplyoee)
     this.storageService.set('employees', employees);
+    
+    this.toaster.show();
   }
 
   generateId(employeesArray): number {
     return Math.max(...employeesArray.map(o => o.id), 0) + 1;
   }
-
 }

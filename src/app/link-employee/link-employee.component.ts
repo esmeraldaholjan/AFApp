@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { StorageService } from '../shared/services/storage.service';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
@@ -8,6 +8,8 @@ import { FormGroup, FormBuilder } from '@angular/forms';
   styleUrls: ['./link-employee.component.scss']
 })
 export class LinkEmployeeComponent implements OnInit {
+  @ViewChild('toaster') toaster: any;
+  
   companies: Array<any>;
   employees: Array<any>;
   unlinkedEmployees: Array<any>;
@@ -34,6 +36,8 @@ export class LinkEmployeeComponent implements OnInit {
 
     this.employees.find(e => e.id === employee.id)['company'] = this.linkEmployeeToCompanyForm.controls.company.value;
     this.storageService.set('employees', this.employees);
+
+    this.toaster.show();
 
     this.ngOnInit();
   }

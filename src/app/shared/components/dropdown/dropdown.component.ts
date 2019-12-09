@@ -31,7 +31,7 @@ export class DropdownComponent implements OnInit, ControlValueAccessor {
   }
 
   writeValue(input): void {
-    this.propagateChange(input);
+    if(input) this.propagateChange(input);
   }
 
   registerOnTouched() {

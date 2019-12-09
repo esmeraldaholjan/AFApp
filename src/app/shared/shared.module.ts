@@ -8,14 +8,15 @@ import { TranslateModule } from '@ngx-translate/core';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { ButtonComponent } from './components/button/button.component';
 import { StorageService } from './services/storage.service';
+import { ToasterComponent } from './components/toaster/toaster.component';
 
 @NgModule({
   imports: [
     CommonModule,
     TranslateModule.forRoot()
   ],
-  declarations: [HeaderComponent, FooterComponent, MainContainerComponent, InputComponent, DropdownComponent, ButtonComponent],
-  exports: [HeaderComponent, FooterComponent, MainContainerComponent, InputComponent, DropdownComponent, ButtonComponent],
+  declarations: [HeaderComponent, FooterComponent, MainContainerComponent, InputComponent, DropdownComponent, ButtonComponent, ToasterComponent],
+  exports: [HeaderComponent, FooterComponent, MainContainerComponent, InputComponent, DropdownComponent, ButtonComponent, ToasterComponent],
   providers: [StorageService]
 })
 export class SharedModule { }

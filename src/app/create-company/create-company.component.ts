@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { StorageService } from '../shared/services/storage.service';
 
@@ -8,6 +8,9 @@ import { StorageService } from '../shared/services/storage.service';
   styleUrls: ['./create-company.component.scss']
 })
 export class CreateCompanyComponent implements OnInit {
+  @ViewChild('toasterSuccess') toasterSuccess: any;
+  @ViewChild('toasterRemove') toasterRemove: any;
+  
   companies: Array<any>;
   companyInfoForm: FormGroup;
   emplyoeesInChoosenCompany: Array<any>;
@@ -41,6 +44,8 @@ export class CreateCompanyComponent implements OnInit {
 
     this.companies.push(newCompany)
     this.storageService.set('companies', this.companies);
+
+    this.toasterSuccess.show();
   }
 
   seeComapnyDetails(company) {
@@ -60,6 +65,8 @@ export class CreateCompanyComponent implements OnInit {
   removeEmployee(employee) {
     this.employees.find(e => e.id === employee.id)['company'] = "";
     this.storageService.set('employees', this.employees);
+
+    this.toasterRemove.show();
 
     this.seeComapnyDetails(this.company);
   }

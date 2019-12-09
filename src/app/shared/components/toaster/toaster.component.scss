@@ -1,0 +1,39 @@
+.toaster-container {
+  visibility: hidden;
+  position: fixed;
+  background-color: #5A743A;
+  color: white;
+  font-family: sans-serif;
+  font-size: 18px;
+  border-radius: 8px;
+  top: 5rem;
+  padding: 2rem;
+  right: 2rem;
+
+  &.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 5rem;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 5rem;
+    opacity: 1;
+  }
+} 
